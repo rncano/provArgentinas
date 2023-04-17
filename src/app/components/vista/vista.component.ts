@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProvinciaService } from 'src/app/services/provincia.service';
 
 @Component({
   selector: 'app-vista',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private servicioProv: ProvinciaService) { }
 
   ngOnInit(): void {
+
+    console.log(this.servicioProv.getProvincias())
+
   }
 
 }
