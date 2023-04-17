@@ -1,8 +1,16 @@
 
 body{
     background-color: #AABBCC !important;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
 }
 
-footer{
-    align-items: center;
+.footer{
+    background-color:aquamarine; 
+    padding: 1em 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
