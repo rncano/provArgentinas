@@ -28,13 +28,9 @@ export class VistaComponent implements OnInit {
     //Si checked es verdadero agregamos un item al array seleccionMult. Sino, remover 
     if ($event.target.checked) {
       //push agrega un nuevo elemento al array
-      this.seleccionMult.push($event.target.value);
-     
-     for(var i = 0; i < this.seleccionMult.length; i++ ){
-
-      console.log(this.seleccionMult[i]);
-
-     }
+      this.seleccionMult.push(JSON.parse($event.target.value));      
+      
+      console.log(this.seleccionMult);
       
       
     }
@@ -45,7 +41,7 @@ export class VistaComponent implements OnInit {
     }
     //el metodo sort mantiene el orden del array. Es conveniente porque las acciones del usuario no lo son
     this.seleccionMult.sort();
-    console.log(this.seleccionMult);
+    //console.log(this.seleccionMult);
 
     //this.revelar = $event.target.checked;
 
