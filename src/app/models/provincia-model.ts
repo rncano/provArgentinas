@@ -5,5 +5,12 @@ export interface ProvinciaModel {
     nombreCapital?: string;
     descripcion?: string;
     imagenProvincia?: string;
-    lugaresProvincia?: string;
+    videoProvincia?: string;
+    region?:string; 
+	activado?: string;
 }
+
+
+	
+	
+    
