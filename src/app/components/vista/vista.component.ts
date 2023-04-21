@@ -12,7 +12,7 @@ export class VistaComponent implements OnInit {
   provincias: ProvinciaModel[] = [];
   seleccionMult: ProvinciaModel[] = [];
 
- 
+
 
   constructor(private servicioProv: ProvinciaService) { }
 
@@ -28,19 +28,29 @@ export class VistaComponent implements OnInit {
     //Si checked es verdadero agregamos un item al array seleccionMult. Sino, remover 
     if ($event.target.checked) {
       //push agrega un nuevo elemento al array
-      this.seleccionMult.push(JSON.parse($event.target.value));      
-      
+      this.seleccionMult.push(JSON.parse($event.target.value));
+
       console.log(this.seleccionMult);
-      
-      
+
+
     }
     else {
+
+
+
       //splice quita elementos del array. Recibe splice(inicio, cuantos)
       //indexOf devuelve la posicion en el array del valor pasado por parametro
-      this.seleccionMult.splice(this.seleccionMult.indexOf($event.target.value), 1);
-    }
+      const index = JSON.parse($event.target.value);
+      const selectedIndex = this.seleccionMult.findIndex(item => item.id === index.id);
+      if (selectedIndex !== -1) {
+        // Eliminar el objeto del array seleccionMult usando el índice encontrado
+        this.seleccionMult.splice(selectedIndex, 1);
+      }
+      console.log(this.seleccionMult); 
+  }
     //el metodo sort mantiene el orden del array. Es conveniente porque las acciones del usuario no lo son
-    this.seleccionMult.sort();
+    this.seleccionMult.sort((x, y) => (Number(x.id) || 0) - (Number(y.id) || 0));
+
     //console.log(this.seleccionMult);
 
     //this.revelar = $event.target.checked;
