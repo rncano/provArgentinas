@@ -46,7 +46,7 @@
       <th scope="col">Descripción</th>
       <th scope="col">Región</th>
       <th scope="col">Acción</th>
-      <th scope="col">Video</th>
+      <!--<th scope="col">Video</th>-->
     </tr>
   </thead>
   <tbody *ngIf="provincias.length > 0; else fila">
@@ -55,11 +55,11 @@
       <td class="table-info">{{provincia.id}}</td>
       <td class="table-info">{{provincia.nombreProvincia}}</td>
       <td class="table-info">{{provincia.nombreCapital}}</td>
-      <td class="table-info"> <img src={{provincia.imagenProvincia}} alt="Imagen de" align="center" width="275"
-          height="183"></td>
+      <td class="table-info"> <img src={{provincia.imagenProvincia}} alt="Imagen de" align="center" width="275" height="183"></td>
       <td class="table-info">{{provincia.descripcion}}</td>
       <td class="table-info">{{provincia.region}}</td>
       <td class="table-info"> <input type="checkbox" [value]="provincia | json" (click)="addRemoveItem($event)"></td>
+      <!--<td class="table-info"><iframe width="560" height="315" src={{provincia.videoProvincia}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </td> -->
 
     </tr>
   </tbody>

@@ -14,7 +14,7 @@ export class ProvinciaService {
         nombreProvincia: "Buenos Aires",
         nombreCapital: "La Plata",
         descripcion: "Es la provincia más poblada de Argentina y alberga la capital del país, Buenos Aires. Es conocida por sus playas, sus estancias y sus barrios históricos.",
-        imagenProvincia: '.\assets\media\bsas.jpg',
+        imagenProvincia: './assets/media/bsas.jpg',
         videoProvincia: "https://www.youtube.com/embed/uZBdCxjlDOw",
         region:"Centro"         
       },
